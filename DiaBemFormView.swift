@@ -16,6 +16,7 @@ struct DiaBemFormView: View {
     @State private var height: Int = 0
     
     @State private var lastGlucoseMeasurementDate = Date()
+    @State private var test = Date()
     @State private var hourAndMinute = Date()
     @State private var glucose: Double = 0.0
     
@@ -29,8 +30,7 @@ struct DiaBemFormView: View {
             }
             
             Section(header: Text("Glicose")) {
-                DatePicker("Data", selection: $lastGlucoseMeasurementDate, displayedComponents: .date)
-                DatePicker("Hora", selection: $hourAndMinute, in: Date()..., displayedComponents: .hourAndMinute)
+                DatePicker("Data", selection: $lastGlucoseMeasurementDate, displayedComponents: [.date, .hourAndMinute])
                 TextField("Glicose", value: $glucose, formatter: NumberFormatter())
             }
             
