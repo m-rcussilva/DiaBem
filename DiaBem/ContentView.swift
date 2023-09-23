@@ -44,6 +44,10 @@ struct ContentView: View {
                 .padding()
                 Spacer()
             }
+            .navigationTitle("Inicio")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(false)
+            .navigationBarHidden(true)
         }
         .padding()
     }

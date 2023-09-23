@@ -10,15 +10,13 @@ import Foundation
 
 struct DiaBemFormView: View {
     
-    @State private var fullName = ""
-    @State private var age = ""
-    @State private var weight: Double = 0.0
-    @State private var height: Int = 0
+    @State var fullName = ""
+    @State var age = ""
+    @State var weight: Double = 0.0
+    @State var height: Int = 0
     
-    @State private var lastGlucoseMeasurementDate = Date()
-    @State private var test = Date()
-    @State private var hourAndMinute = Date()
-    @State private var glucose: Double = 0.0
+    @State var lastGlucoseMeasurementDate = Date()
+    @State var glucose: Double = 0.0
     
     var body: some View {
         Form {
@@ -44,5 +42,7 @@ struct DiaBemFormView: View {
                     .font(.system(size: 20, weight: .medium))
             })
         }
+        .navigationTitle("Formulario")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
