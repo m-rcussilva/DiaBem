@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		4E48C7332ABCAF2F000C2C69 /* DiaBemFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E48C7322ABCAF2F000C2C69 /* DiaBemFormView.swift */; };
+		4E9D397F2AC2061A00676AB5 /* GlucoseModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D397D2AC2061A00676AB5 /* GlucoseModel.xcdatamodeld */; };
+		4E9D39812AC20B3200676AB5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D39802AC20B3200676AB5 /* DataController.swift */; };
+		4E9D39852AC2280000676AB5 /* TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D39842AC227FF00676AB5 /* TimeFormatting.swift */; };
 		4E9FAD902ABBBA7E00393012 /* DiaBemApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FAD8F2ABBBA7E00393012 /* DiaBemApp.swift */; };
 		4E9FAD922ABBBA7E00393012 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9FAD912ABBBA7E00393012 /* ContentView.swift */; };
 		4E9FAD942ABBBA7F00393012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9FAD932ABBBA7F00393012 /* Assets.xcassets */; };
 		4E9FAD972ABBBA7F00393012 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9FAD962ABBBA7F00393012 /* Preview Assets.xcassets */; };
-		4EA68A452ABE29E20099CE3D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA68A442ABE29E20099CE3D /* LineChartView.swift */; };
+		4EA68A452ABE29E20099CE3D /* GlucoTrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA68A442ABE29E20099CE3D /* GlucoTrackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E48C7322ABCAF2F000C2C69 /* DiaBemFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaBemFormView.swift; sourceTree = SOURCE_ROOT; };
+		4E48C7322ABCAF2F000C2C69 /* DiaBemFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaBemFormView.swift; path = DiaBem/Views/DiaBemFormView.swift; sourceTree = SOURCE_ROOT; };
+		4E9D397E2AC2061A00676AB5 /* GlucoseModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GlucoseModel.xcdatamodel; sourceTree = "<group>"; };
+		4E9D39802AC20B3200676AB5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4E9D39842AC227FF00676AB5 /* TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatting.swift; sourceTree = "<group>"; };
 		4E9FAD8C2ABBBA7E00393012 /* DiaBem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiaBem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9FAD8F2ABBBA7E00393012 /* DiaBemApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaBemApp.swift; sourceTree = "<group>"; };
 		4E9FAD912ABBBA7E00393012 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E9FAD932ABBBA7F00393012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9FAD962ABBBA7F00393012 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4EA68A442ABE29E20099CE3D /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		4EA68A442ABE29E20099CE3D /* GlucoTrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlucoTrackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E9D397C2AC205CD00676AB5 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E9D397D2AC2061A00676AB5 /* GlucoseModel.xcdatamodeld */,
+				4E9D39802AC20B3200676AB5 /* DataController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4E9D39822AC2205500676AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4E9FAD912ABBBA7E00393012 /* ContentView.swift */,
+				4E48C7322ABCAF2F000C2C69 /* DiaBemFormView.swift */,
+				4EA68A442ABE29E20099CE3D /* GlucoTrackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4E9D39832AC2205B00676AB5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4E9D39842AC227FF00676AB5 /* TimeFormatting.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		4E9FAD832ABBBA7E00393012 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				4E9FAD8F2ABBBA7E00393012 /* DiaBemApp.swift */,
-				4E9FAD912ABBBA7E00393012 /* ContentView.swift */,
+				4E9D39832AC2205B00676AB5 /* Helpers */,
+				4E9D39822AC2205500676AB5 /* Views */,
+				4E9D397C2AC205CD00676AB5 /* DataModel */,
 				4E9FAD932ABBBA7F00393012 /* Assets.xcassets */,
 				4E9FAD952ABBBA7F00393012 /* Preview Content */,
-				4E48C7322ABCAF2F000C2C69 /* DiaBemFormView.swift */,
-				4EA68A442ABE29E20099CE3D /* LineChartView.swift */,
 			);
 			path = DiaBem;
 			sourceTree = "<group>";
@@ -144,9 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E48C7332ABCAF2F000C2C69 /* DiaBemFormView.swift in Sources */,
+				4E9D39852AC2280000676AB5 /* TimeFormatting.swift in Sources */,
+				4E9D39812AC20B3200676AB5 /* DataController.swift in Sources */,
 				4E9FAD922ABBBA7E00393012 /* ContentView.swift in Sources */,
 				4E9FAD902ABBBA7E00393012 /* DiaBemApp.swift in Sources */,
-				4EA68A452ABE29E20099CE3D /* LineChartView.swift in Sources */,
+				4E9D397F2AC2061A00676AB5 /* GlucoseModel.xcdatamodeld in Sources */,
+				4EA68A452ABE29E20099CE3D /* GlucoTrackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4E9D397D2AC2061A00676AB5 /* GlucoseModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4E9D397E2AC2061A00676AB5 /* GlucoseModel.xcdatamodel */,
+			);
+			currentVersion = 4E9D397E2AC2061A00676AB5 /* GlucoseModel.xcdatamodel */;
+			path = GlucoseModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4E9FAD842ABBBA7E00393012 /* Project object */;
 }
