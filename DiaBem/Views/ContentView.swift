@@ -22,21 +22,38 @@ struct ContentView: View {
                 List {
                     ForEach(person) { person in
                         NavigationLink(destination: Text("\(person.glucose)")) {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 6.0) {
-                                    Text(person.fullName!)
+                            VStack(alignment: .leading, spacing: 6.0) {
+                                Text(person.fullName!)
+                                    .font(.system(size: 22))
+                                    .bold()
+                                
+                                HStack {
+                                    Text("Glicose:")
+                                        .foregroundStyle(.red)
                                         .bold()
-                                    Text("\(Int(person.glucose))") + Text("Glicose").foregroundStyle(.red)
-                                    Text("\(person.age)")
-                                    Text("\(person.weight)")
-                                    Text("\(person.height)")
+                                    Text("\(Int(person.glucose))")
+                                        .bold()
                                 }
+                                
+                                HStack {
+                                    Text("Idade: \(person.age)")
+                                    Spacer()
+                                    Text("Peso: \(Int(person.weight))")
+                                    Spacer()
+                                    Text("Altura: \(person.height)")
+                                }
+                                
                                 Spacer()
                                 
-                                Text(calcTimeSince(date: person.date!))
-                                    .foregroundStyle(.gray)
-                                    .italic()
+                                HStack {
+                                    Spacer()
+                                    Text(calcTimeSince(date: person.date!))
+                                        .font(.caption)
+                                        .foregroundStyle(.gray)
+                                        .italic()
+                                }
                             }
+                            .padding(16)
                         }
                     }
                     .onDelete(perform: deleteGlucoseData)
@@ -64,6 +81,11 @@ struct ContentView: View {
     }
     
     private func deleteGlucoseData(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { person[$0] }.forEach(managedObjContext.delete)
+            
+            DataController().save(context: managedObjContext)
+        }
     }
 }
 

@@ -44,8 +44,6 @@ struct DiaBemFormView: View {
                 Button(action: {
                     if let ageInt = Int(age) {
                         DataController().addPerson(fullName: fullName, glucose: glucose, age: Int16(ageInt), weight: weight, height: Int16(exactly: height)!, context: managedObjContext)
-                        
-                        print("Dados salvos com sucesso!")
                         dismiss()
                     } else {
                         showingAgeConversionError = true
